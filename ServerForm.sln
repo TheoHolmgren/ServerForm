@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerForm", "ServerForm\ServerForm.csproj", "{DFA3014E-0CBC-43F2-9C3E-C2B0D231CA6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFA3014E-0CBC-43F2-9C3E-C2B0D231CA6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFA3014E-0CBC-43F2-9C3E-C2B0D231CA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFA3014E-0CBC-43F2-9C3E-C2B0D231CA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFA3014E-0CBC-43F2-9C3E-C2B0D231CA6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6138CA25-0FB1-450E-A78A-71E79CFFB444}
+	EndGlobalSection
+EndGlobal
