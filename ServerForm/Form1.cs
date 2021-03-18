@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
 
 namespace ServerForm
 {
-    using System.Net;
-    using System.Net.Sockets;
+
     public partial class Form1 : Form
     {
         TcpListener lyssnare;
@@ -32,6 +33,10 @@ namespace ServerForm
             byte[] inData = new byte[256];
             //Väntar på send i klienten
             int antalByte = klient.GetStream().Read(inData, 0, inData.Length);
+
+            tbxInkorg.Text = Encoding.Unicode.GetString(inData, 0, antalByte);
+            klient.Close();
+            lyssnare.Stop();
         }
     }
 }
