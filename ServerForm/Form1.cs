@@ -15,9 +15,9 @@ namespace ServerForm
 
     public partial class Form1 : Form
     {
-        TcpListener lyssnare;
-        TcpClient klient;
-        int port = 12345;
+        TcpListener lyssnare; //Lyssnar efter anslutningsförfrågningar
+        TcpClient klient;//Sköter kommunikationen till klienten
+        int port = 12345; //Bestämmer porten
         public Form1()
         {
             InitializeComponent();
@@ -32,11 +32,11 @@ namespace ServerForm
 
             byte[] inData = new byte[256];
             //Väntar på send i klienten
-            int antalByte = klient.GetStream().Read(inData, 0, inData.Length);
+            int antalByte = klient.GetStream().Read(inData, 0, inData.Length); //Läser meddelandet från strömmen och lägger den i in-data
 
-            tbxInkorg.Text = Encoding.Unicode.GetString(inData, 0, antalByte);
-            klient.Close();
-            lyssnare.Stop();
+            tbxInkorg.Text = Encoding.Unicode.GetString(inData, 0, antalByte); //Omvandlar meddelandet till läsbar text
+            klient.Close(); //Stänger klienten
+            lyssnare.Stop(); //Stänger lyssnaren
         }
     }
 }
