@@ -34,7 +34,7 @@ namespace ServerForm
             //Väntar på send i klienten
             int antalByte = klient.GetStream().Read(inData, 0, inData.Length); //Läser meddelandet från strömmen och lägger den i in-data
 
-            tbxInkorg.Text = Encoding.Unicode.GetString(inData, 0, antalByte); //Omvandlar meddelandet till läsbar text
+            tbxInkorg.Text = Encoding.Unicode.GetString(inData, 0, antalByte); //Omvandlar meddelandet från binär kod till läsbar text
             klient.Close(); //Stänger klienten
             lyssnare.Stop(); //Stänger lyssnaren
         }
